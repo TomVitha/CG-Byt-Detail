@@ -2251,7 +2251,7 @@
   #e28,
   #hypo, #hypo2,
   #e30,
-  /* #e31, #e31+hr, */
+  #e31, #e31+hr,
   #e32,
   #e27,
   #e25,
@@ -2259,7 +2259,7 @@
   #e37,
   #e1
   {
-    /* display: none; */
+    display: none;
   }
 
 </style>
