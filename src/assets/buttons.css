@@ -1,0 +1,200 @@
+/* ? BTN ? */
+
+/* TODO: Create button component  */
+
+/** Main Btn styling **/
+.btn {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border-radius: var(--btn-border-radius, 6px);
+    border: none;
+    color: var(--color-blue, #20234c);
+    display: flex;
+    font-family: inherit;
+    font-size: 1.0rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    gap: 0 0.5em;
+    justify-content: center;
+    line-height: 1.1;
+    overflow: hidden;
+    padding: 0.8em 1.25em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 150ms;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: initial;
+    width: 100%;
+    z-index: 0;
+}
+
+
+@media screen and (max-width: 575px){
+    .btn {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/** Btn Hover styling **/
+.btn::before,
+.btn::after{
+    background-color: currentColor;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center center 0px;
+    transition-duration: 200ms;
+    transition-property: transform, opacity, height, color;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    width: 100%;
+}
+
+.btn::before{
+    z-index: -1;
+}
+
+.btn:not(.disabled, :disabled, .outline):hover::after{
+    opacity: 0.0333;
+}
+
+.btn:not(.disabled, :disabled, .outline):active::after{
+    opacity: 0.0666;
+}
+
+
+/* ? Outline Btn */
+/** Gray color hard-coded **/
+
+.btn.outline{
+    color: var(--gray-dark);
+    font-weight: 500;
+}
+
+/** Colored (gray) background **/
+.btn.outline::before{
+    background-color: var(--gray-dark);
+    border-radius: var(--btn-border-radius);
+    height: 0%;
+    opacity: 1;
+    top: unset;
+}
+
+/** Outline border **/
+.btn.outline::after{
+    background: transparent;
+    border-radius: var(--btn-border-radius);
+    border: 1px solid var(--gray-dark);
+    opacity: 1;
+
+    /** Fixes glitching causing border being clipped **/
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    top: 1px;
+    left: 1px;
+}
+
+
+@media (hover: hover) {
+    .btn.outline:hover{
+        color: white;
+    }
+    
+    .btn.outline:hover::before{
+        height: 100%;
+    }
+}
+
+@media not (hover: hover) {
+    .btn.outline:hover:active{
+        color: white;
+    }
+    
+    .btn.outline:hover:active::before{
+        height: 100%;
+    }
+}
+
+
+/** Inline Btn **/
+.btn.inline{
+    display: inline-flex;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+/** Separating margin above non-inline Btns **/
+.btn:not(.inline)+.btn:not(inline){
+    /* margin-top: 0.5em; */
+}
+
+
+/** Rounded Btn **/
+.btn.rounded{
+    --btn-border-radius: 1.5em;
+}
+
+
+/* ? Btn colors (with fallbacks) */
+.btn-yellow {
+    color: var(--color-blue, #20234c);
+    background: var(--color-yellow, #ffed00);
+}
+
+.btn-blue {
+    color: #fff;
+    background: var(--color-blue, #20234c);
+}
+
+.btn-white {
+    color: var(--color-primary, var(--color-blue, #20234c));
+    background: white;
+}
+
+.btn-gray {
+    color: var(--gray-dark, #4D4D4D);
+    background: var(--gray-light, #f2f2f2);
+}
+
+.btn-primary {
+    color: #fff;
+    background: var(--color-primary);
+}
+
+.btn-secondary {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.btn-tertiary {
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
+}
+
+/** Font-Awesome Icon inside Btn **/
+.btn [class^="fa-"]{
+    /* font-size: 80%; */
+    margin-bottom: -0.10em;
+}
+
+
+/* ? Disables animations */
+@media (prefers-reduced-motion){
+    .btn,
+    .btn::before,
+    .btn::after{
+        transition: all 0ms !important;
+    }
+}
+/* ? BTN (end) */

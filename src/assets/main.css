@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import './base.css';
+@import './RS_styles-remake.css';
+@import './buttons.css';
+@import './cenik.css';          /* Ceník styling */
+@import './tabs.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* font-weight: normal; */
+}
+
+body {
+  color: var(--color-text, #4D4D4D);
+  font-family: 'Exo 2', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+button{
+  font-family: inherit;
+}
+
+#app{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app,
+main{
+  flex: 1;
+}
+
+main{
+  padding-top: 35px;
+}
+
+.container {
+  max-width: var(--container-max-width, 1110px);
+  padding-inline: var(--container-padding, 15px);
+  margin-inline: auto;
+  position: relative;
+  height: 100%;
+}
+
+.container-breakout{
+  margin-left: calc((100vw - 100% - 0px)* -1 / 2);
+  width: calc(100vw - 0px);
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+  user-select: none;
+}
+
+.hidden {
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.bullet-points {
+  list-style-type: disc;
+}
+
+.bullet-points li {
+  padding-left: 0.5rem;
+}
+
+.bullet-points li+li{
+  margin-top: 0.5em;
+}

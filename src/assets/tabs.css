@@ -1,0 +1,136 @@
+
+/* # PILL */
+.tabs.pill {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin: 0rem auto 0.5rem;
+
+  .tab {
+    appearance: none;
+    background-color: var(--color-superwhite, transparent);
+    display: inline-flex;
+    font-family: inherit;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    padding: 0.5em 0.75em;
+    line-height: 1;
+    font-size: 14px;
+    min-width: 8rem;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.01)
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 999px;
+      border-bottom-left-radius: 999px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 999px;
+      border-bottom-right-radius: 999px;
+    }
+
+    & + &{
+      border-left: 0;
+    }
+
+    &.active {
+      background-color: white;
+      font-weight: 600;
+      /* Compensates for increased width from bold */
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+
+
+/* # line */
+.tabs.line{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin: 0rem auto 0.5rem;
+
+  .tab{
+    position: relative;
+    font-size: 14px;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.0rem 1.25rem 3px;
+    transition: background-color 0.05s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:not(.active):hover{
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &.active{
+      letter-spacing: -0.01em;
+      font-weight: 600;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: var(--color-blue, #20234c);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        /* border-bottom: 3px solid var(--color-blue, #20234c); */
+      }
+    }
+
+  }
+}
+
+
+
+/* # BULLET */
+.tabs.bullet{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin: 0rem auto 0.5rem;
+  border-radius: 999px;
+  gap: 0.25rem;
+  background-color: var(--color-gray-light, #f5f5f5);
+  width: fit-content;
+  padding: 0.25rem;
+
+  .tab{
+    font-size: 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.5em 1.25em;
+    transition: background-color 0.1s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &.active{
+      background-color: white;
+      font-weight: 600;
+      /* Compensates for increased width from bold */
+      letter-spacing: -0.01em;
+    }
+
+    &:not(.active):hover {
+      /* background-color: rgba(255, 255, 255, 0.5) */
+    }
+  }
+}
+

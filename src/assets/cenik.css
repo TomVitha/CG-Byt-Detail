@@ -1,0 +1,269 @@
+/* # CARD */
+.cardd {
+  background-color: white;
+  border-radius: 10px;
+  /* display: flex !important; */
+  flex-direction: column;
+  /* gap: 0.5rem; */
+  /* Outline */
+  /* box-shadow: 0px 0px 0px 1px #f1f1f1;  */
+  overflow: clip;
+  padding: 1.0rem 1.25rem;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: box-shadow 150ms, background-color 150ms, filter 150ms;
+  border: 1px solid #f1f1f1;
+}
+
+/* # STATUS */
+.status {
+  border-radius: 999px;
+  line-height: 1;
+  text-align: center;
+  background-color: #ffffff;
+  display: block;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  -webkit-user-select: none;
+  user-select: none;
+  max-width: 9em;
+  padding: 0.25em 0.75em;
+  color: #696969;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  font-size: 0.625rem;
+}
+
+.status.status--dot {
+  display: inline-flex;
+  width: 11px;
+  height: 11px;
+  overflow: hidden;
+  overflow: clip;
+  aspect-ratio: 1;
+  padding: 0;
+  background-color: currentColor !important;
+}
+
+
+.status.status--available {
+  color: #66cc66;
+  background-color: #f8fff9;
+}
+
+.status.status--under-offer {
+  color: #cc9933;
+  background-color: #fffdf8;
+}
+
+.status.status--sold {
+  color: #993333;
+  background-color: #fffbfb;
+}
+
+/* # SPECS TABLE */
+.specs-table {
+  font-size: 1rem;
+  align-self: flex-start;
+  width: 100%;
+  line-height: 1.2;
+}
+
+
+.specs-table table {
+  width: 100%;
+  margin: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.specs-table.fixed table {
+  /* causes equal-width columns */
+  table-layout: fixed;
+}
+
+.specs-table thead :is(th, td){
+  /* text-align: center; */
+}
+
+.specs-table thead tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.specs-table tbody tr+tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.specs-table :is(th, td) {
+  padding: 0.75em 0.5em;
+  vertical-align: baseline;
+}
+
+/* First column */
+.specs-table tr td:first-child {
+  /* font-weight: 700; */
+  /* has no effect */
+  /* max-width: 50%; */
+}
+
+.specs-table.bold-left tr td:first-child,
+.specs-table.bold-right tr td:not(:first-child) {
+  font-weight: 700;
+}
+
+.specs-table tr td small {
+  font-weight: normal;
+}
+
+.specs-table table .buttons-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  width: 100%;
+}
+
+.specs-table a:not(.btn) {
+  color: var(--color-blue, #20234c);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.specs-table a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.specs-table td:has(.buttons-holder) {
+  padding-inline: 0;
+}
+
+.specs-table i[class^="fa-"] {
+  font-size: 0.75em;
+  margin-left: 0.5em;
+  /* ? maybe - chevron or no chevron ? */
+  display: none;
+}
+
+.specs-table.apart {
+  text-align: right;
+
+  tr td:first-child {
+    text-align: left;
+  }
+}
+
+.specs-table.inward {
+  text-align: left;
+
+  tr td:first-child {
+    text-align: right;
+  }
+}
+
+
+.specs-table.first-col-center tr td:first-child {
+  text-align: center;
+}
+
+.specs-table.last-col-center tr td:last-child {
+  text-align: center;
+}
+
+
+/* # FAV HEART */
+.card .fav {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+/* If browser supports :has() selector */
+@supports selector(:has(*)) {
+  /* and if device is capable of hover and uses mouse */
+  @media (hover: hover) and (pointer: fine) {
+
+    /* hides heart by default */
+    .card .fav {
+      /* display: none; */
+    }
+
+    /* shows heart on hover */
+    .card:hover .fav {
+      /* display: block; */
+    }
+
+    /* heart stays visible if active */
+    .card .fav:has(.fa-heart.fas) {
+      /* display: block; */
+    }
+  }
+}
+
+/* Heart icon general */
+.fav {
+  cursor: pointer;
+  /* color: cyan; */
+  transition: color 75ms, scale 150ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 1.25rem;
+  /* padding: 16px 18px; */
+  border-radius: 0 16px 0 16px;
+}
+
+
+
+
+.fav:hover .fal {
+  color: var(--color-heart);
+}
+
+
+.fav:hover:active .fa-heart {
+  scale: 75%;
+  color: var(--color-heart);
+}
+
+/* Add to fav - heart fill */
+.fav .fa-heart.fas {
+  color: var(--color-heart);
+  animation-name: heart-fill;
+  animation-duration: 125ms;
+}
+
+/* Remove from fav - heart pop */
+.fav .fa-heart.fal {
+  animation-name: heart-pop;
+  animation-duration: 100ms;
+}
+
+
+@keyframes heart-fill {
+  0% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 75%;
+  }
+
+  75% {
+    scale: 110%;
+  }
+
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes heart-pop {
+  0% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 90%;
+  }
+
+  100% {
+    scale: 100%;
+  }
+}

@@ -1,0 +1,221 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: auto !important;
+    /*overflow-x: hidden;*/
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #20234c;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+b,
+strong {
+    /* font-weight: bolder; */
+    font-weight: 700;
+}
+
+img {
+    border-style: none;
+}
+
+* {
+    text-rendering: optimizeLegibility;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    word-wrap: break-word;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-bottom: 2.125rem;
+    font-weight: 300;
+    font-size: 2.125rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin: 0 0 20px 20px;
+}
+
+/*ul:last-child{margin-bottom:0;}*/
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+td {}
+
+th {
+    text-align: left;
+    padding-right: 15px;
+}
+
+.reset {
+    clear: both
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: #c5cbd8;
+    background-color: #c5cbd8;
+    margin: 3rem 0;
+    opacity: 1;
+}
+
+.img-fluid {
+    height: auto;
+    max-width: 100%;
+}
+
+.container img {
+    max-width: 100%;
+}
+
+.obsah-wrap {
+    padding: 35px 0;
+}
+
+.obsah-wrap a {
+    color: #20234c;
+    text-decoration: underline;
+}
+
+.obsah-wrap a:hover {
+    text-decoration: none;
+}
+
+.rs-head {
+    padding: 60px 50px;
+    min-height: 420px;
+    background: #C5D7E1 url("https://www.central-group.cz/uloziste/b0/b037313e-51d6-415c-a1de-2ea8fa7a019d.jpg") no-repeat center top;
+}
+
+.rs-head h1 {
+    font-size: 40px;
+    text-align: right;
+    line-height: 50px;
+    color: #20234c;
+}
+
+.rs-head h1 span {
+    font-weight: 300;
+    font-size: 40px;
+    display: block;
+}
+
+.flex {
+    width: 100%;
+    display: table;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex>* {
+    width: 47.2%;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 991px) {
+    .flex {
+        display: inline-block;
+    }
+
+    .flex>* {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rs-head h1 {
+        font-size: 34px;
+        line-height: 2.15rem;
+        background: rgba(255, 255, 255, 0.65);
+        display: inline-block;
+        float: right;
+        padding: 10px;
+    }
+
+    .rs-head h1 span {
+        font-size: 32px;
+    }
+
+    .rs-head {
+        padding: 90px 50px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .rs-head {
+        padding: 75px 30px;
+    }
+
+    .rs-head h1 {
+        font-size: 25px;
+        line-height: 1.875rem;
+    }
+
+    .rs-head h1 span {
+        font-size: 25px;
+    }
+
+    h2 {
+        margin-bottom: 1.75rem;
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,25 @@
+
+/* semantic color variables for this project */
+:root {
+    /* CG */
+    --color-yellow: #ffed00;
+    --color-blue: #20234c;
+    --color-blue-dark: #0e1237;
+    --color-gray: #ededed;
+    --color-gray-light: #f2f2f2;
+    --color-gray-dark: #4D4D4D;
+    --color-superwhite: #fcfcfc;
+    --color-text: var(--color-gray-dark, #4D4D4D);
+    --color-heart: #ff9aac;
+
+    --container-max-width: 1110px;
+    --container-padding: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+
+
