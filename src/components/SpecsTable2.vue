@@ -26,17 +26,17 @@
         <tr>
           <td>3</td>
           <td>Pokoj</td>
-          <td>17&nbsp;m²</td>
+          <td>16,9&nbsp;m²</td>
         </tr>
         <tr>
           <td>4</td>
           <td>Pokoj</td>
-          <td>17&nbsp;m²</td>
+          <td>13,2&nbsp;m²</td>
         </tr>
         <tr>
           <td>5</td>
           <td>Pokoj</td>
-          <td>17&nbsp;m²</td>
+          <td>12,8&nbsp;m²</td>
         </tr>
         <tr>
           <td>6</td>
@@ -46,56 +46,48 @@
         <tr>
           <td>7</td>
           <td>Šatna</td>
-          <td>2,5&nbsp;m²</td>
+          <td>2,8&nbsp;m²</td>
         </tr>
-        <!-- <tr>
+        <tr>
           <td>8</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Komora</td>
+          <td>3,9&nbsp;m²</td>
         </tr>
         <tr>
           <td>9</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Koupelna s toaletou</td>
+          <td>7,4&nbsp;m²</td>
         </tr>
         <tr>
           <td>10</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Koupelna s toaletou</td>
+          <td>4&nbsp;m²</td>
         </tr>
         <tr>
           <td>11</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Toaleta</td>
+          <td>1,8&nbsp;m²</td>
         </tr>
         <tr>
           <td>12</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Předsíň</td>
+          <td>20,2&nbsp;m²</td>
         </tr>
         <tr>
           <td>13</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Terasa</td>
+          <td>34,9&nbsp;m²</td>
         </tr>
         <tr>
           <td>14</td>
-          <td></td>
-          <td>&nbsp;m²</td>
+          <td>Terasa</td>
+          <td>11,3&nbsp;m²</td>
         </tr>
         <tr>
           <td>15</td>
-          <td></td>
-          <td>&nbsp;m²</td>
-        </tr> -->
-        <!-- <tr>
-          <td colspan="2">Sklep/y</td>
-          <td>6,2&nbsp;m²<br><a href="#">PP2 / S123</a></td>
+          <td>Terasa</td>
+          <td>9,3&nbsp;m²</td>
         </tr>
-        <tr>
-          <td colspan="2">Dvougarážové uzavřené stání</td>
-          <td><a href="#">PP2&nbsp;/&nbsp;2G100</a></td>
-        </tr> -->
       </tbody>
     </table>
   </div>

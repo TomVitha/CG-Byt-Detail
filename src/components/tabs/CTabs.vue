@@ -4,7 +4,7 @@ import { ref, provide, defineProps, defineSlots, computed } from 'vue'
 const props = defineProps({
   class: {
     type: String,
-    default: 'tabs line'
+    default: 'line'
   }
 })
 const slots = defineSlots()
@@ -27,7 +27,7 @@ const selectedTab = computed(() => {
   <!-- Permanent class .tabs + optional styling class -->
   <div :class="['tabs', props.class]">
     <!-- Tab -->
-    <div 
+    <button 
       :class="[
         tab.class, 
         { active: tab.title === selectedTitle }
@@ -38,7 +38,7 @@ const selectedTab = computed(() => {
       @click="selectedTitle = tab.title"
     >
       {{ tab.title }}
-    </div>
+    </button>
   </div>
   <!-- Content of tab -->
   <component :is="selectedTab" />

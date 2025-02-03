@@ -12,6 +12,8 @@
     --color-superwhite: #fcfcfc;
     --color-text: var(--color-gray-dark, #4D4D4D);
     --color-heart: #ff9aac;
+    /* --color-focus-outline: #56b6ffc0; */
+    --color-focus-outline: #a8c7fa;
 
     --container-max-width: 1110px;
     --container-padding: 15px;

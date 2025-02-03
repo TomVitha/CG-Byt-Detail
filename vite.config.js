@@ -15,4 +15,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  // Fixes not refreshing on update
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 })

@@ -15,14 +15,6 @@
           <td>49,8&nbsp;m²</td>
         </tr>
         <tr>
-          <td>Parkovací stání</td>
-          <td>1 za 275.670&nbsp;Kč</td>
-        </tr>
-        <tr>
-          <td>Sklep</td>
-          <td>1 za 275.670&nbsp;Kč</td>
-        </tr>
-        <tr>
           <td>Nadstandardní příplatkové položky</td>
           <td>70.809&nbsp;Kč/m²</td>
         </tr>

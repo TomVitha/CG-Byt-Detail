@@ -1,5 +1,5 @@
 /* # CARD */
-.cardd {
+.card {
   background-color: white;
   border-radius: 10px;
   /* display: flex !important; */
@@ -8,21 +8,51 @@
   /* Outline */
   /* box-shadow: 0px 0px 0px 1px #f1f1f1;  */
   overflow: clip;
-  padding: 1.0rem 1.25rem;
+  padding: 16px 18px;
   position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transition: box-shadow 150ms, background-color 150ms, filter 150ms;
   border: 1px solid #f1f1f1;
 }
 
-.cardd.thick{
+.card.inline{
+  display: inline-flex !important;
+
+  text-align: center;
+}
+
+.card.thick{
   /* padding: 1.5rem; */
   padding: 1.5rem 1.75rem;
 }
 
-.cardd.thin{
+.card.thin{
   padding: 0.5rem 0.75rem;
 }
+
+a.card{
+  text-decoration: none;
+
+  &:hover{
+    background-color: #fdfdfd;
+  }
+}
+
+.card__row{
+  padding: 16px 18px;
+  margin: 0 -18px;
+
+  & + & {
+    border-top: 1px solid #f1f1f1;
+  }
+
+  .card > & {
+    &:first-child{margin-top: -16px;}
+    &:last-child{margin-bottom: -16px;}
+  }
+}
+
+
 
 /* # STATUS */
 .status {
@@ -94,12 +124,14 @@
   /* text-align: center; */
 }
 
-.specs-table thead tr {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
+.specs-table:not(.no-lines) {
+  thead tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
 
-.specs-table tbody tr+tr {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  tbody tr+tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+  }
 }
 
 .specs-table :is(th, td) {
@@ -144,10 +176,10 @@
 }
 
 .specs-table i[class^="fa-"] {
-  font-size: 0.75em;
-  margin-left: 0.5em;
+  /* font-size: 0.75em; */
+  /* margin-left: 0.5em; */
   /* ? maybe - chevron or no chevron ? */
-  display: none;
+  /* display: none; */
 }
 
 .specs-table.apart {
@@ -179,37 +211,11 @@
   text-align: right;
 }
 
-
-/* # FAV HEART */
-.card .fav {
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
+.specs-table.va-middle :is(th, td) {
+  vertical-align: middle;
 }
 
-/* If browser supports :has() selector */
-@supports selector(:has(*)) {
-  /* and if device is capable of hover and uses mouse */
-  @media (hover: hover) and (pointer: fine) {
 
-    /* hides heart by default */
-    .card .fav {
-      /* display: none; */
-    }
-
-    /* shows heart on hover */
-    .card:hover .fav {
-      /* display: block; */
-    }
-
-    /* heart stays visible if active */
-    .card .fav:has(.fa-heart.fas) {
-      /* display: block; */
-    }
-  }
-}
 
 /* Heart icon general */
 .fav {
