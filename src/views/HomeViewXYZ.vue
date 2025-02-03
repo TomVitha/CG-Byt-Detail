@@ -25,11 +25,8 @@
           <div class="prim-img--container">
             <img class="prim-img" src="https://www.central-group.cz/Uloziste/f8/f8312d63-b478-44ab-a0ff-d0ad422ab612.gif" alt="">
           </div>
-          <div class="prim-rack--aside">
+          <div class="prim-rack--wrapper">
             <!-- Next to main img -->
-            <img src="https://www.central-group.cz/Uloziste/68/68703066-8b96-4925-abcd-77670b0f7b75.png" alt="Půdorys podlaží">
-            <img src="https://www.central-group.cz/Uloziste/fd/fdbd0cb2-9fa8-4a19-95be-97e509ea2ad7.gif" alt="Pohled na dům s vyznačením patra">
-            <img src="https://www.central-group.cz/Uloziste/8f/8fff6b6e-772c-4278-9f6f-47b7f798135f.png" alt="Situační plánek lokality">
           </div>
         </div>
       </div>
@@ -166,7 +163,7 @@
               <div class="cardd">
               <p>Kontaktujte nás</p>
               <div>
-                <a href="#" class="btn btn-gray">Sjednat schůzku</a>
+                <a href="#" class="btn btn-gray">Něco</a>
                 <!-- <span>nebo</span> -->
                 <a href="#" class="btn btn-yellow">Rezervovat</a>
               </div>
@@ -378,7 +375,6 @@
     font-size: 1.5rem;
     margin-top: 1.0rem;
     line-height: 1;
-    color: black;
   }
 
 
@@ -450,18 +446,6 @@
     }
   }
 
-  .prim-rack--aside{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    img{
-      max-height: 155px;
-      /* object-fit: contain; */
-      cursor: pointer;
-    }
-  }
-
   .specs-table {
     font-size: 0.875rem;
     margin-block: -0.5rem;
@@ -511,11 +495,10 @@
     transition: background-color 0.1s;
 
     /* With bg (card-style) */
-    font-size: 18px;
     background-color: white;
     border: 1px solid #f1f1f1;
-    width:  46px;
-    height: 46px;
+    width:  50px;
+    height: 50px;
   }
 
   .prim-img--container{
@@ -781,23 +764,6 @@
 
     &:hover{
       text-decoration: underline;
-    }
-  }
-
-  @media screen and (max-width: 991px){
-    .prim-img--container{
-      max-height: 300px;
-      padding: 16px;
-    }
-    .prim-in{
-      display: flex;
-      flex-direction: column;
-    }
-    .prim-rack--aside{
-      flex-direction: row;
-    }
-    .prim-rack--aside img{
-      max-height: 100px;
     }
   }
 

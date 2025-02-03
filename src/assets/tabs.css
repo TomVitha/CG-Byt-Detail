@@ -73,7 +73,7 @@
     -webkit-tap-highlight-color: transparent;
 
     &:not(.active):hover{
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.033);
     }
 
     &.active{
@@ -84,13 +84,13 @@
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;
-        right: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        width: 8ch;
         height: 3px;
         background-color: var(--color-blue, #20234c);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        /* border-bottom: 3px solid var(--color-blue, #20234c); */
       }
     }
 

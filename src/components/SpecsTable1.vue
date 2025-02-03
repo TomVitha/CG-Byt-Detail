@@ -7,10 +7,6 @@
     <table>
       <tbody>
         <tr>
-          <td>Číslo bytu</td>
-          <td>D64</td>
-        </tr>
-        <tr>
           <td>Podlahová plocha</td>
           <td>52,5&nbsp;m²</td>
         </tr>
@@ -37,10 +33,6 @@
         <tr>
           <td>Termín dokončení</td>
           <td><time>DOKONČENO</time></td>
-        </tr>
-        <tr>
-          <td>Cena vč DPH</td>
-          <td><strong style="font-size: 18px">4.796.113&nbsp;Kč</strong></td>
         </tr>
       </tbody>
     </table>

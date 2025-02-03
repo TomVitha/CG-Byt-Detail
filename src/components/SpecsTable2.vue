@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="specs-table">
+  <div class="specs-table last-col-right">
     <table>
       <thead>
         <tr>
@@ -48,7 +48,7 @@
           <td>Šatna</td>
           <td>2,5&nbsp;m²</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>8</td>
           <td></td>
           <td>&nbsp;m²</td>
@@ -87,15 +87,15 @@
           <td>15</td>
           <td></td>
           <td>&nbsp;m²</td>
-        </tr>
-        <tr>
+        </tr> -->
+        <!-- <tr>
           <td colspan="2">Sklep/y</td>
           <td>6,2&nbsp;m²<br><a href="#">PP2 / S123</a></td>
         </tr>
         <tr>
           <td colspan="2">Dvougarážové uzavřené stání</td>
           <td><a href="#">PP2&nbsp;/&nbsp;2G100</a></td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>

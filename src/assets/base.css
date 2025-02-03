@@ -7,6 +7,7 @@
     --color-blue-dark: #0e1237;
     --color-gray: #ededed;
     --color-gray-light: #f2f2f2;
+    --color-gray-mid: #e4e4e4;
     --color-gray-dark: #4D4D4D;
     --color-superwhite: #fcfcfc;
     --color-text: var(--color-gray-dark, #4D4D4D);
@@ -14,6 +15,16 @@
 
     --container-max-width: 1110px;
     --container-padding: 15px;
+
+    --header-height-top: 55px;
+    --header-height-bottom: 39px;
+    --header-height: calc(var(--header-height-top) + var(--header-height-bottom));
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --header-height: var(--header-height-top);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

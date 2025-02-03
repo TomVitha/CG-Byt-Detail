@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import './base.css';
 @import './RS_styles-remake.css';
 @import './buttons.css';
 @import './cenik.css';          /* Ceník styling */
 @import './tabs.css';
+
+:root{
+  scroll-behavior: smooth;
+}
 
 *,
 *::before,
@@ -12,6 +19,20 @@
   padding: 0;
   margin: 0;
   /* font-weight: normal; */
+}
+
+/* ! TEMP */
+/* body {font-family: 'Inter', 'Roboto', sans-serif !important;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Poppins', 'Arial', sans-serif !important;} */
+
+html {
+  scroll-padding-top: 90px;
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    scroll-padding-top: 130px;
+  }
 }
 
 body {
@@ -23,6 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
+
 }
 
 button{
@@ -41,7 +63,11 @@ main{
 }
 
 main{
-  padding-top: 35px;
+  /* padding-top: 35px; */
+}
+
+a {
+  color: inherit
 }
 
 .container {
@@ -86,4 +112,9 @@ img{
 
 .bullet-points li+li{
   margin-top: 0.5em;
+}
+
+p:last-child{
+  margin-bottom: 0;
+  /* color: red !important */
 }
