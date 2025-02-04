@@ -1,5 +1,5 @@
 <script setup>
-  import { ref } from "vue";
+  import { ref, computed } from "vue";
 
   import InfoComp from '../components/InfoComp.vue'
   import Tabs from '../components/tabs/CTabs.vue'
@@ -16,10 +16,16 @@
   import HeroCarousel from '../components/HeroCarousel.vue'
   import SuggestedApts from '../components/SuggestedApts.vue'
 
+  const urokovaSazba = 0.0479;
   const cenaBytu = ref(8796113);
-  const vyseUveru = ref(806465);
+  const vyseUveru = computed(() => 
+    (cenaBytu.value - vlastniZdroje.value)
+  )
   const vlastniZdroje = ref(5000000);
   const splatnost = ref(10);
+  const mesicniSplatka = computed(() => 
+    (vyseUveru.value / splatnost.value / 12) 
+  )
 
 
   const shareDataThisPage = {
@@ -41,7 +47,7 @@
     }
   }
 
-  const jv = ref(1); // Example value for language variant
+  const jv = ref(1);
 
   const formatCurrency = (value, jv) => {
       let locale;
@@ -317,7 +323,8 @@
                 </InfoComp>
                 <InfoComp>
                   <template #icon><i class="fa-light fa-leaf"></i></template>
-                  <template #heading>Energetická náročnost budovy</template>
+                  <!-- <template #heading>Energetická náročnost budovy</template> -->
+                  <template #heading>Energetická třída</template>
                   <template #text>B</template>
                 </InfoComp>
                 <InfoComp>
@@ -978,8 +985,8 @@
                   </div>
                 </div>
                 <div>
-                  <label>Měsíční splátka</label>
-                  <p><strong style="font-size: 1.125rem;">15.142 Kč</strong></p>
+                  <label style="margin-top: 0.5rem">Měsíční splátka</label>
+                  <p><strong style="font-size: 1.125rem;">{{ Math.round(mesicniSplatka) }}&nbsp;Kč</strong></p>
                 </div>
                 <hr>
                 <div>
@@ -1111,11 +1118,12 @@
             </FancyBox>
             <h5>Vizualizace</h5>
             <FancyBox class="gallery">
-              <a href="https://picsum.photos/id/200/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/200/200/125" alt=""></a>
-              <a href="https://picsum.photos/id/201/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/201/200/125" alt=""></a>
-              <a href="https://picsum.photos/id/202/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/202/200/125" alt=""></a>
-              <a href="https://picsum.photos/id/203/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/203/200/125" alt=""></a>
-              <a href="https://picsum.photos/id/204/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/204/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/210/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/210/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/211/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/211/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/212/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/212/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/213/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/213/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/214/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/214/200/125" alt=""></a>
+              <a href="https://picsum.photos/id/215/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/215/200/125" alt=""></a>
             </FancyBox>
           </Tab>
           <Tab title="Lokalita">
@@ -1392,8 +1400,8 @@
   }
 
   h2{
-    /* font-size: 22px; */
-    font-size: 20px;
+    font-size: 22px;
+    /* font-size: 20px; */
     margin: 0;
     font-weight: 600;
     /* display: flex; */
@@ -1457,10 +1465,10 @@
   
   .trinity{
     display: flex;
-    gap: 0.5rem 6%;
+    gap: 0.5rem 1.25rem;
     flex-wrap: wrap;
     /* font-size: 14px; */
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     flex-direction: row;
     margin: 1rem 0;
@@ -1471,11 +1479,12 @@
     }
 
     [class*="fa"]{
-      font-size: 18px;
-      width:     18px;
+      --trinity-icon-size: 18px;
+      font-size: var(--trinity-icon-size);
+      width:     var(--trinity-icon-size);
       margin-right: 10px;
       text-align: center;
-      vertical-align: middle;
+      /* vertical-align: middle; */
       /* maybe? */
       color: var(--color-blue, #20234c);
     }
@@ -1714,7 +1723,6 @@
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
     gap: 6px;
     position: relative;
-    /* max-height: 200px; */
     overflow: clip;
 
     &::after{
