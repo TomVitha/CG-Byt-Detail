@@ -234,7 +234,7 @@
                   <!-- Fav -->
                   <button class="action fav" onclick="$(this).find('i').toggleClass('fal fas')"><i class="fal fa-heart"></i></button>
                   <!-- Hypo -->
-                  <a href="#hypo" class="action"><i class="fa-light fa-calculator"></i></a>
+                  <a href="#hypo3" class="action"><i class="fa-light fa-calculator"></i></a>
                   <!-- Share -->
                   <button class="action" @click="sharePage().prevent" ><i class="fa-light fa-arrow-up-from-bracket"></i></button>
                 </div>
@@ -891,21 +891,6 @@
               </div>
             </section>
 
-            <section class="mobile-only" id="e7">
-              <h3>Ke stažení</h3>
-              <div class="card">
-                <div class="specs-table apart va-middle">
-                  <table>
-                    <tbody>
-                      <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Karta bytu</a></td></tr>
-                      <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Technický půdorys</a></td></tr>
-                      <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Popis provedení</a></td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-
             <section id=e33>
               <h3>Nadstandardní položky</h3>
               <ul class="bullet-points">
@@ -1257,6 +1242,23 @@
         </div>
         <div class="card p-0">
           <img src="https://www.central-group.cz/Uloziste/fa/facc97ed-b264-4141-b652-289c41441212.jpg" alt="" style="width: 100%; height: 550px; object-fit: cover; max-height: 60vh;">
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-only" id="e7">
+      <div class="container">
+        <h3>Ke stažení</h3>
+        <div class="card">
+          <div class="specs-table apart va-middle">
+            <table>
+              <tbody>
+                <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Karta bytu</a></td></tr>
+                <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Technický půdorys</a></td></tr>
+                <tr><td><a href="#" class="smol-link"><i class="fa-regular fa-file-pdf"></i>Popis provedení</a></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
