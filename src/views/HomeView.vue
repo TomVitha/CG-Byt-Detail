@@ -174,7 +174,7 @@
     <section class="main-map2" id="e23">
       <div class="container">
         <div class="card">
-          <HeroCarousel id="hero-carousel" >
+          <HeroCarousel class="hero-carousel" id="hero-carousel" >
             <figure>
               <!-- <img src="https://www.central-group.cz/Uloziste/6b/6bade729-b37e-4514-9a51-0dfcf5540b1e.gif" alt="Půdorys bytu"> -->
               <img src="https://www.central-group.cz/Uloziste/f8/f8312d63-b478-44ab-a0ff-d0ad422ab612.gif" alt="Půdorys bytu">
@@ -190,10 +190,16 @@
               <img src="https://www.central-group.cz/Uloziste/f6/f627eb50-6daa-4a99-97b4-9ba39834274e.gif" alt="Pohled na dům s vyznačením patra">
               <figcaption>Pohled na dům s vyznačením patra</figcaption>
             </figure>
-            <figure>
+            <figure style="background-color: #e5e5e5;">
               <img src="https://www.central-group.cz/Uloziste/3d/3d5c0ab0-eae8-4d67-aa14-b24bc60ec086.png" alt="Situační plánek lokality">
               <figcaption>Situační plánek lokality</figcaption>
             </figure>
+            <a href="#e18" class="gallery-slide-grid">
+              <!-- <img src="https://www.central-group.cz/Uloziste/f8/f8312d63-b478-44ab-a0ff-d0ad422ab612.gif" class="gallery-slide-grid__main" style="padding: 1rem; object-fit: contain;" alt="Půdorys bytu"> -->
+              <img src="https://picsum.photos/id/1000/2000/1250" class="gallery-slide-grid__main" alt="">
+              <img src="https://picsum.photos/id/1010/2000/1250" class="gallery-slide-grid__aside" alt="">
+              <img src="https://picsum.photos/id/1020/2000/1250" class="gallery-slide-grid__aside" alt="">
+            </a>
           </HeroCarousel>
         </div>
       </div>
@@ -375,42 +381,44 @@
 
             <section id="e38">
               <h3>Místnosti</h3>
-              <h5 class="separator-underline">Vnitřní místnosti</h5>
-              <ul class="bullet-points">
-                <li>
-                    <span>Obývací pokoj a kuchyňský kout:</span> <strong>23,5&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Pokoj:</span> <strong>14&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Koupelna:</span> <strong>4,3&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Toaleta:</span> <strong>1,6&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Předsíň:</span> <strong>5,1&nbsp;m²</strong>
-                </li>
-              </ul>
-              <h5 class="separator-underline">Úložné prostory</h5>
-              <ul class="bullet-points">
-                <li>
-                    <span>Šatna:</span> <strong>4,5&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Komora:</span> <strong>3,9&nbsp;m²</strong>
-                </li>
-              </ul>
-              <h5 class="separator-underline">Vnější prostory</h5>
-              <ul class="bullet-points">
-                <li>
-                    <span>Terasa:</span> <strong>15,4&nbsp;m²</strong>
-                </li>
-                <li>
-                    <span>Předzahrádka:</span> <strong>28&nbsp;m²</strong>
-                </li>
-              </ul>
+              <div class="rooms-counter">
+                <h5 class="separator-underline">Vnitřní místnosti</h5>
+                <ul class="bullet-points">
+                  <li>
+                      <span>Obývací pokoj a kuchyňský kout:</span> <strong>23,5&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Pokoj:</span> <strong>14&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Koupelna:</span> <strong>4,3&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Toaleta:</span> <strong>1,6&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Předsíň:</span> <strong>5,1&nbsp;m²</strong>
+                  </li>
+                </ul>
+                <h5 class="separator-underline">Úložné prostory</h5>
+                <ul class="bullet-points">
+                  <li>
+                      <span>Šatna:</span> <strong>4,5&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Komora:</span> <strong>3,9&nbsp;m²</strong>
+                  </li>
+                </ul>
+                <h5 class="separator-underline">Vnější prostory</h5>
+                <ul class="bullet-points">
+                  <li>
+                      <span>Terasa:</span> <strong>15,4&nbsp;m²</strong>
+                  </li>
+                  <li>
+                      <span>Předzahrádka:</span> <strong>28&nbsp;m²</strong>
+                  </li>
+                </ul>
+              </div>
             </section>
 
 
@@ -1461,7 +1469,7 @@
     margin-block: -0.5rem;
 
     .card {
-      padding: 16px 0 0;
+      padding: 0;
     }
   }
   
@@ -1754,6 +1762,8 @@
       /* clip-path: url(#SquircleClip-2); */
     }
   }
+
+
 
 
   .expand {
@@ -2055,6 +2065,7 @@
     width: 100%;
     gap: 12px;
     padding: 0px 0px 5px;
+    scrollbar-width: thin;
     /* opts element (scroll container) into scroll snapping */
     scroll-snap-type: x mandatory;
 
@@ -2240,6 +2251,18 @@
   border-radius: 999px;
   transition: opacity 100ms;
   opacity: 0;
+}
+
+.rooms-counter {
+  counter-reset: rooms-counter; 
+}
+
+.rooms-counter li {
+  counter-increment: rooms-counter;
+}
+
+.rooms-counter li::marker {
+  content: counter(rooms-counter, decimal) '.';
 }
 
 

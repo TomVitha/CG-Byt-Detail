@@ -38,7 +38,7 @@ const getSlotContent = () => {
 </template>
 
 <style>
-/* WIP */
+/* ! NOT SCOPED ! */
 
 #hero-carousel {
 
@@ -55,33 +55,55 @@ const getSlotContent = () => {
   --f-button-next-pos: 0px;
   --f-button-prev-pos: 0px;
 
+
+  @media screen and (min-width: 576px) {
+    .f-button {
+      --f-button-next-pos: 10px;
+      --f-button-prev-pos: 10px;
+      --f-button-bg: white;
+      --f-button-hover-bg: white;
+      --f-button-border-radius: 999px;
+      /* --f-button-border: 1px solid #f1f1f1; */
+      --f-button-width:   36px;
+      --f-button-height:  36px;
+      --f-button-svg-width:   20px;
+      --f-button-svg-height:  20px;
+    }
+  }
+
+  &.has-dots{
+    margin-bottom: 0;
+  }
+
+  .f-carousel__dots{
+    bottom: 0;
+  }
+
   .f-carousel__slide{
     max-height: 500px;
-    /* max-height: 100%; */
   }
 
   .f-carousel__slide>*{
     height: 100%;
-    /* aspect-ratio: var(--f-carousel-slide-aspect-ratio); */
   }
 
   .f-carousel__slide>figure{
     max-height: inherit;
     height: inherit;
     position: relative;
-    padding-bottom: 2rem;
+    padding: 16px 0px calc(var(--f-carousel-dots-height, 30px) + 1.25rem);
     margin-inline: auto;
 
     figcaption {
       position: absolute;
-      bottom: 0;
+      bottom: var(--f-carousel-dots-height, 30px);
       left: 0;
       right: 0;
       color: inherit;
       text-align: center;
       display: block;
       margin: 0 auto;
-      background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+      /* background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%); */
       font-size: 0.875rem;
     }
   }
@@ -98,12 +120,45 @@ const getSlotContent = () => {
 
   .compass {
     position: absolute;
-    top:    0px;
+    top:    16px;
     left:   18px;
     width:  36px;
     height: 36px;
     mix-blend-mode: multiply;
     border-radius: 999px;
   }
+
+  .gallery-slide-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 36%;
+    grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+    gap: 8px;
+    padding: 0 !important;
+    transition-property: scale, opacity;
+    transition-duration: 0.45s;
+    transition-timing-function: ease-out;
+    
+
+    &:hover{
+      scale: 1.025;
+      opacity: 0.65;
+    }
+  }
+
+  .gallery-slide-grid__main{
+    grid-column: span 2;
+    grid-row: span 2;
+    max-width: 100%;
+    object-fit: cover;
+
+  }
+
+  .gallery-slide-grid__aside{
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
+
+
 </style>
