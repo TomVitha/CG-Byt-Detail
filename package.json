@@ -8,11 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.32",
+    "swiper": "^11.2.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },

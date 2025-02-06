@@ -42,15 +42,18 @@ const getSlotContent = () => {
 
 #hero-carousel {
 
-  /* height: 500px; */
-  /* --f-carousel-slide-height: 100%; */
-
-  /* max-height: 500px; */
-
-  --f-carousel-slide-aspect-ratio: 1.5;
-  --f-carousel-slide-max-width: var(--container-max-width, 1110px);
-  --f-carousel-slide-width: min(var(--f-carousel-slide-max-width), 100vw);
-  --f-carousel-slide-height: calc( var(--f-carousel-slide-width) / var(--f-carousel-slide-aspect-ratio) );
+  /* HEIGHT BREAKPOINTS */
+  --f-carousel-slide-height: 500px;
+  @media screen and (max-width: 991px) { 
+    & { 
+      --f-carousel-slide-height: 400px; 
+    } 
+  }
+  @media screen and (max-width: 575px) {
+     & { 
+      --f-carousel-slide-height: 325px; 
+    } 
+  }
 
   --f-button-next-pos: 0px;
   --f-button-prev-pos: 0px;
@@ -58,16 +61,15 @@ const getSlotContent = () => {
 
   @media screen and (min-width: 576px) {
     .f-button {
-      --f-button-next-pos: 10px;
-      --f-button-prev-pos: 10px;
-      --f-button-bg: white;
-      --f-button-hover-bg: white;
+      --f-button-next-pos:      10px;
+      --f-button-prev-pos:      10px;
+      --f-button-bg:          white;
+      --f-button-hover-bg:    white;
       --f-button-border-radius: 999px;
-      /* --f-button-border: 1px solid #f1f1f1; */
-      --f-button-width:   36px;
-      --f-button-height:  36px;
-      --f-button-svg-width:   20px;
-      --f-button-svg-height:  20px;
+      --f-button-width:         36px;
+      --f-button-height:        36px;
+      --f-button-svg-width:     20px;
+      --f-button-svg-height:    20px;
     }
   }
 

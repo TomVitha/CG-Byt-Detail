@@ -15,6 +15,7 @@
   import FancyBox from '../components/FancyBox.vue'
   import HeroCarousel from '../components/HeroCarousel.vue'
   import SuggestedApts from '../components/SuggestedApts.vue'
+  import HeroSwiper from '../components/HeroSwiper.vue'
 
   const urokovaSazba = 0.0479;
   const cenaBytu = ref(8796113);
@@ -103,6 +104,7 @@
 
 
 
+
 </script>
 
 <template>
@@ -119,7 +121,8 @@
     <section>
       <div class="headings container">
         <div class="heading">
-          <h1>Byt&nbsp;A37</h1>
+          <!-- <h1>Byt&nbsp;A37</h1> -->
+          <h1>A37</h1>
           <span class="status status--available dot">Volný</span>
         </div>
       </div>
@@ -173,6 +176,7 @@
     <!-- Ještě jeden pokus o carousel -->
     <section class="main-map2" id="e23">
       <div class="container">
+        <!-- <h3>Carousel</h3> -->
         <div class="card">
           <HeroCarousel class="hero-carousel" id="hero-carousel" >
             <figure>
@@ -201,6 +205,21 @@
               <img src="https://picsum.photos/id/1020/2000/1250" class="gallery-slide-grid__aside" alt="">
             </a>
           </HeroCarousel>
+        </div>
+      </div>
+    </section>
+
+    <!-- SWIPER -->
+    <section id="e39">
+      <div class="container">
+        <!-- <h3>Swiper</h3> -->
+        <div class="card">
+          <HeroSwiper>
+            <img src="https://www.central-group.cz/Uloziste/f8/f8312d63-b478-44ab-a0ff-d0ad422ab612.gif" alt="Půdorys bytu">
+            <img src="https://www.central-group.cz/Uloziste/b4/b45dcd22-898d-4c88-a0b4-0bbb3f27cbc7.png" alt="Půdorys podlaží">
+            <img src="https://www.central-group.cz/Uloziste/f6/f627eb50-6daa-4a99-97b4-9ba39834274e.gif" alt="Pohled na dům s vyznačením patra">
+            <img src="https://www.central-group.cz/Uloziste/3d/3d5c0ab0-eae8-4d67-aa14-b24bc60ec086.png" alt="Situační plánek lokality">
+          </HeroSwiper>
         </div>
       </div>
     </section>
@@ -380,8 +399,8 @@
             <hr class="tighten">
 
             <section id="e38">
-              <h3>Místnosti</h3>
               <div class="rooms-counter">
+                <h3>Místnosti</h3>
                 <h5 class="separator-underline">Vnitřní místnosti</h5>
                 <ul class="bullet-points">
                   <li>
@@ -1116,7 +1135,6 @@
               <a href="https://picsum.photos/id/212/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/212/200/125" alt=""></a>
               <a href="https://picsum.photos/id/213/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/213/200/125" alt=""></a>
               <a href="https://picsum.photos/id/214/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/214/200/125" alt=""></a>
-              <a href="https://picsum.photos/id/215/2000/1250" data-fancybox="gallery2"><img src="https://picsum.photos/id/215/200/125" alt=""></a>
             </FancyBox>
           </Tab>
           <Tab title="Lokalita">
@@ -1399,7 +1417,7 @@
   .heading{
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
@@ -1447,6 +1465,10 @@
     text-align: center;
   }
 
+  h3{
+    font-size: 22px;
+  }
+
 
   h5{
     font-size: 1rem;
@@ -1465,7 +1487,8 @@
     margin-block: -0.5rem;
   }
 
-  .main-map2{
+  #e23,
+  #e39{
     margin-block: -0.5rem;
 
     .card {
@@ -1730,7 +1753,7 @@
   /* # GALLERY */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 176px), 1fr));
     gap: 6px;
     position: relative;
     overflow: clip;
@@ -1921,6 +1944,10 @@
     }
     .info-comp-grid.specs-2{
       grid-template-columns: 1fr;
+
+      /* TEMP */
+      column-gap: 0;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -2290,6 +2317,8 @@
   #e25,
   #e35,
   #e37,
+  /* #e39, */
+  #e23,
   #e1
   {
     display: none;

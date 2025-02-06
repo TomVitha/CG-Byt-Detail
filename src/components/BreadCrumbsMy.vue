@@ -39,8 +39,8 @@
   }
 
   .breadcrumbs>ul {
-    padding: 6px 6px 6px 16px;
-    margin: 0;
+    padding: 8px 0px 0px 16px;
+    margin: 4px 0 0;
     list-style-type: none;
   }
 
@@ -61,7 +61,7 @@
     margin-right: 10px;
   }
 
-  @media (min-width: 530px) {
+  @media (min-width: 575px) {
     .breadcrumbs>ul {
       margin-top: 8px;
     }
