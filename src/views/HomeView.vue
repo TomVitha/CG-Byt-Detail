@@ -410,7 +410,7 @@
                       <span>Pokoj:</span> <strong>14&nbsp;m²</strong>
                   </li>
                   <li>
-                      <span>Koupelna:</span> <strong>6,9&nbsp;m²</strong>
+                      <span>Koupelna:</span> <strong>42,0&nbsp;m²</strong>
                   </li>
                   <li>
                       <span>Toaleta:</span> <strong>1,6&nbsp;m²</strong>
